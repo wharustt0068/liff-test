@@ -69,11 +69,11 @@
     }
 
     function getContext() {
-      document.getElementById("type").append(liff.getContent().type)
-      document.getElementById("viewType").append(liff.getContent().viewType)
-      document.getElementById("utouId").append(liff.getContent().utouId)
-      document.getElementById("roomId").append(liff.getContent().roomId)
-      document.getElementById("groupId").append(liff.getContent().groupId)
+      document.getElementById("type").append(liff.getContext().type)
+      document.getElementById("viewType").append(liff.getContext().viewType)
+      document.getElementById("utouId").append(liff.getContext().utouId)
+      document.getElementById("roomId").append(liff.getContext().roomId)
+      document.getElementById("groupId").append(liff.getContext().groupId)
     }
 
     async function getUserProfile() {
