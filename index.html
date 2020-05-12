@@ -63,6 +63,13 @@
     }
 
     async function getFriendship() {
+      const friend = await liff.getFriendship()
+      document.getElementById("friendship").append(friend.friendFlag)
+      if(!friend.friendFlag){
+        if(confirm("คุณยังไม่ได้เพิ่ม Message API รบกวนเพิ่ม Message API")){
+          window.location = "https://line.me/R/ti/p/@754yztxz"
+        }
+      }
     }
 
     async function sendMsg() {
@@ -72,11 +79,7 @@
               "type": "sticker",
               "stickerId" : 1,
               "packageId" : 1
-            },
-              {
-                "type": "text",
-                "text" : "sawadee"
-              }
+            }
          ])
             alert("Message sent")
        }
@@ -121,7 +124,7 @@
       getEnvironment()
       getUserProfile()
       getContext()
-      // getFriendship()
+      getFriendship()
       // createUniversalLink()
     }
     main()
