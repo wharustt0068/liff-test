@@ -29,7 +29,7 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="liff/path/?param=9">Link to Path</a></p>
 
-  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+  <button class="" id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
   <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
@@ -54,6 +54,7 @@
     }
 
     function closed() {
+      liff.closedWindow()
     }
 
     async function scanCode() {
